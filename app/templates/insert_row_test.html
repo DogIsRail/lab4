@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Test</title>
+</head>
+<body>
+    <h1>Add Test</h1>
+    <form method="POST" action="{{ url_for(action) }}">
+        {{ form.hidden_tag() }}
+
+        <div>
+            {{ form.student_id.label }} {{ form.student_id() }}
+            {% if form.student_id.errors %}
+                <ul class="errors">
+                    {% for error in form.student_id.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.yeartest.label }} {{ form.yeartest() }}
+            {% if form.yeartest.errors %}
+                <ul class="errors">
+                    {% for error in form.yeartest.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.test_name.label }} {{ form.test_name() }}
+            {% if form.test_name.errors %}
+                <ul class="errors">
+                    {% for error in form.test_name.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.lang.label }} {{ form.lang() }}
+            {% if form.lang.errors %}
+                <ul class="errors">
+                    {% for error in form.lang.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+            <div>
+                {{ form.subtest.label }} {{ form.subtest() }}
+                {% if form.subtest.errors %}
+                    <ul class="errors">
+                        {% for error in form.subtest.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    
+            <div>
+                {{ form.teststatus.label }} {{ form.teststatus() }}
+                {% if form.teststatus.errors %}
+                    <ul class="errors">
+                        {% for error in form.teststatus.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    
+            <div>
+                {{ form.ball100.label }} {{ form.ball100() }}
+                {% if form.ball100.errors %}
+                    <ul class="errors">
+                        {% for error in form.ball100.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    
+            <div>
+                {{ form.ball12.label }} {{ form.ball12() }}
+                {% if form.ball12.errors %}
+                    <ul class="errors">
+                        {% for error in form.ball12.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div>
+                {{ form.dpalevel.label }} {{ form.dpalevel() }}
+                {% if form.dpalevel.errors %}
+                    <ul class="errors">
+                        {% for error in form.dpalevel.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    
+            <div>
+                {{ form.ball.label }} {{ form.ball() }}
+                {% if form.ball12.errors %}
+                    <ul class="errors">
+                        {% for error in form.ball12.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div>
+                {{ form.adaptscale.label }} {{ form.adaptscale() }}
+                {% if form.adaptscale.errors %}
+                    <ul class="errors">
+                        {% for error in form.adaptscale.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    
+            <div>
+                {{ form.test_loc_id.label }} {{ form.test_loc_id() }}
+                {% if form.test_loc_id.errors %}
+                    <ul class="errors">
+                        {% for error in form.test_loc_id.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+        <div>
+            <input type="submit" value="Add Test">
+        </div>
+    </form>
+</body>
+</html>

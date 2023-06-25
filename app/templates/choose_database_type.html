@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose DBMS</title>
+</head>
+<body>
+    <h1>Choose DBMS</h1>
+    <a href="http:/">Main</a>
+    <form method="POST" action="{{ url_for('DBMS') }}">
+        {{ form.hidden_tag() }}
+        
+        <div>
+            {{ form.dbms.label }} {{ form.dbms() }}
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+</body>
+</html>

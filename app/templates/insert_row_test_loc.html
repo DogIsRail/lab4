@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Test Location</title>
+</head>
+<body>
+    <h1>Add Test Location</h1>
+    <form method="POST" action="{{ url_for(action) }}">
+        {{ form.hidden_tag() }}
+        
+        <div>
+            {{ form.ptname.label }} {{ form.ptname() }}
+            {% if form.ptname.errors %}
+                <ul class="errors">
+                    {% for error in form.ptname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.ptregname.label }} {{ form.ptregname() }}
+            {% if form.ptregname.errors %}
+                <ul class="errors">
+                    {% for error in form.ptregname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.ptareaname.label }} {{ form.ptareaname() }}
+            {% if form.ptareaname.errors %}
+                <ul class="errors">
+                    {% for error in form.ptareaname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.pttername.label }} {{ form.pttername() }}
+            {% if form.pttername.errors %}
+                <ul class="errors">
+                    {% for error in form.pttername.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            </div>
+
+        <div>
+            <input type="submit" value="Add Test">
+        </div>
+    </form>
+</body>
+</html>

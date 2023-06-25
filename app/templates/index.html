@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    {% for table_name in table_names %}
+        <a href="{{  url_for('show_table', table_name=table_name)}}">{{ table_name }}</a>
+    {% endfor %}
+    <a href="http:/query">Query</a>
+    <a href="http:/dbms">DBMS</a>
+</body>
+</html>

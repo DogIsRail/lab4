@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Living Area</title>
+</head>
+<body>
+    <h1>Add Living Area</h1>
+    <form method="POST" action="{{ url_for(action) }}">
+        {{ form.hidden_tag() }}
+        
+        <div>
+            {{ dbms }}
+        </div>
+        <div>
+            {{ form.regname.label }} {{ form.regname() }}
+            {% if form.regname.errors %}
+                <ul class="errors">
+                    {% for error in form.regname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.areaname.label }} {{ form.areaname() }}
+            {% if form.areaname.errors %}
+                <ul class="errors">
+                    {% for error in form.areaname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.tername.label }} {{ form.tername() }}
+            {% if form.tername.errors %}
+                <ul class="errors">
+                    {% for error in form.tername.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.regtypename.label }} {{ form.regtypename() }}
+            {% if form.regtypename.errors %}
+                <ul class="errors">
+                    {% for error in form.regtypename.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            </div>
+
+        <div>
+
+            <div>
+                {{ form.tertypename.label }} {{ form.tertypename() }}
+                {% if form.tertypename.errors %}
+                    <ul class="errors">
+                        {% for error in form.tertypename.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                </div>
+    
+            <div>
+
+            <input type="submit" value="Add Test">
+        </div>
+    </form>
+</body>
+</html>

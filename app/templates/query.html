@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Results</title>
+</head>
+<body>
+    <h1>Query Results</h1>
+    <a href="http:/">Main</a>
+    <form method="POST" action="{{ url_for('showQuery') }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.regname.label }} {{ form.regname() }}
+            {% if form.regname.errors %}
+                <ul class="errors">
+                    {% for error in form.regname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.yeartest.label }} {{ form.yeartest() }}
+            {% if form.yeartest.errors %}
+                <ul class="errors">
+                    {% for error in form.yeartest.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div>
+            {{ form.test_name.label }} {{ form.test_name() }}
+            {% if form.test_name.errors %}
+                <ul class="errors">
+                    {% for error in form.test_name.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    {% if statistics %}
+        <h2>Query Results:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Region Name</th>
+                    <th>Minimum Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in statistics %}
+                    {% if result.regname %}
+                        <tr>
+                            <td>{{ result.regname }}</td>
+                            <td>{{ result.ball100 }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="2">No results found for region "{{ result }}"</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</body>
+</html>

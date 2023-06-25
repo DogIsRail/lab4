@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add School</title>
+</head>
+<body>
+    <h1>Add School</h1>
+    <form method="POST" action="{{ url_for(action) }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.eoname.label }} {{ form.eoname() }}
+            {% if form.eoname.errors %}
+                <ul class="errors">
+                    {% for error in form.eoname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.eotypename.label }} {{ form.eotypename() }}
+            {% if form.eotypename.errors %}
+                <ul class="errors">
+                    {% for error in form.eotypename.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.eoregname.label }} {{ form.eoregname() }}
+            {% if form.eoregname.errors %}
+                <ul class="errors">
+                    {% for error in form.eoregname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div>
+            {{ form.eoareaname.label }} {{ form.eoareaname() }}
+            {% if form.eoareaname.errors %}
+                <ul class="errors">
+                    {% for error in form.eoareaname.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            </div>
+
+        <div>
+
+            <div>
+                {{ form.eotername.label }} {{ form.eotername() }}
+                {% if form.eotername.errors %}
+                    <ul class="errors">
+                        {% for error in form.eotername.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                </div>
+    
+            <div>
+
+            <input type="submit" value="Add Test">
+        </div>
+    </form>
+</body>
+</html>

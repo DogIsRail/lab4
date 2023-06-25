@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Student</title>
+</head>
+<body>
+    <h1>Insert Student</h1>
+    <form method="POST" action="{{ url_for(action) }}">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.outid.label }} {{ form.outid }}
+            {% for error in form.outid.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.yeartest.label }} {{ form.yeartest }}
+            {% for error in form.yeartest.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.birth.label }} {{ form.birth }}
+            {% for error in form.birth.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.sextypename.label }} {{ form.sextypename }}
+            {% for error in form.sextypename.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.classprofilename.label }} {{ form.classprofilename }}
+            {% for error in form.classprofilename.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.classlangname.label }} {{ form.classlangname }}
+            {% for error in form.classlangname.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.living_area_id.label }} {{ form.living_area_id}}
+            {% for error in form.living_area_id.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.eo_id.label }} {{ form.eo_id }}
+            {% for error in form.eo_id.errors %}
+                <span class="error">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+</body>
+</html>
